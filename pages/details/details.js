@@ -117,19 +117,19 @@ Page({
         })
       }
     })  //获取token
-    var token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjEzIiwibmFtZSI6InRlc3Q5IiwiZW1haWwiOiJ0ZXN0OUB0ZXN0Iiwic3ViIjoidGVzdDlAdGVzdCIsImp0aSI6ImU0YTNkMzVhLWEzN2ItNDgwOC1iOTU1LWY3NzA3NDQ1ODYxZSIsIm5iZiI6MTY3MjExOTIwOCwiZXhwIjoxNjcyMTQwODA4LCJpYXQiOjE2NzIxMTkyMDh9.XJxNJksjjasZN5vNoJGcB5cUhXCOPoawyOf9E339wYc"
     var that = this;
     const FormData = require('../../utils/formData.js')  //引入这个文件
     let formData = new FormData();  //实例化formData
     formData.appendFile("formFile", this.data.info.licensePicUrls[0], "file");//文件字段
     let data = formData.getData();  //组合成data
+    const app = getApp();
     wx.request({
         //请求链接
         url: 'https://photoshare.akasaki.space/api/publicians/new',
-        method: 'post',
+        method: 'POST',
         header: {
           'content-type': 'application/json',
-          'Authorization': 'Bearer ' + token
+          'Authorization': 'Bearer ' + app.globalData.token
         },
         //发送的数据
         data: {
@@ -146,48 +146,18 @@ Page({
             method: 'PUT',
             header: {
               'content-type': data.contentType,
-              'Authorization': 'Bearer ' + token
+              'Authorization': 'Bearer ' + app.globalData.token
             },
             data: data.buffer,
             success (res){
+              wx.navigateBack();
               console.log("图片上传测试" + res)
+            },
+            fail: function(error) {
+              console.log(error)
             }
           });
       },
     });
-    // const FormData = require('../../utils/formData.js')//引入这个文件
-    // let formData = new FormData();//实例化formData
-    // formData.appendFile("formFile", this.data.info.licensePicUrls[0], "file");//文件字段
-    // let data = formData.getData();//组合成data
-    // wx.request({
-    //   url: 'https://photoshare.akasaki.space/api/publicians/' + this.data.id + '/image',
-    //   method: 'PUT',
-    //   header: {
-    //     'content-type': data.contentType,
-    //     'Authorization': 'Bearer ' + this.data.token
-    //   },
-    //   data: data.buffer,
-    //   success (res){
-    //     console.log("图片上传测试" + res)
-    //   }
-    // });
-
-    // console.log('id'+this.data.id)
-    // wx.uploadFile({
-    //   url: 'https://photoshare.akasaki.space/api/publicians/' + this.data.id + '/image', //仅为示例，非真实的接口地址
-    //   filePath: this.data.info.licensePicUrls[0],
-    //   name: 'photo',
-    //   header: {
-    //     "Content-Type": "multipart/form-data",
-    //     'accept': 'application/json',
-    //     'Authorization': 'Bearer ' + this.data.token
-    //   },
-    //   success (res){
-    //     console.log("图片上传测试" + res)
-    //   },
-    //   fail: function(error) {
-    //     console.log(error)
-    //     }
-    // })
   }
 })

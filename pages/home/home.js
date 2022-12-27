@@ -24,17 +24,48 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
+    const app = getApp(); // 使用全局变量
+    wx.request({
+      url: 'https://photoshare.akasaki.space/api/publicians/random',
+      method: 'GET',
+      header: {
+        'content-type': 'application/json',
+        'Authorization': 'Bearer ' + app.globalData.token
+      },
+      success: function (res) {
+        console.log(res.data)
+        console.log('length: '+res.data.length)
+        const app = getApp();
+        app.globalData.dataList = res.data;
+        var imageList = [];
+        var contentList = [];
+        for(var i=0; i<20;  i++) {
+          imageList.push(res.data[i]["image"]);
+          contentList.push(res.data[i]["description"]);
+          // console.log(res.data[i]["description"])
+        }
+        that.setData({
+          ImageList: imageList,
+          ContentList: contentList
+        })
+        app.globalData.imageList = imageList;
+        app.globalData.contentList = contentList;
+        console.log(contentList)
+      },
+      fail: function(error) {
+        console.log(error)
+      }
+    })
     that = this;
-    for(var i=1;i<10;i++){
+    for(var i=1; i<10; i++){
       var circleData = {};
       circleData.nickName = "朋友-"+i;
       circleData.content = "朋友发布-"+i;
       circleData.time = "2022-2-2"+i;
 
-      var imageList = [];
+      var imageList = []
       var loveList = [];
       var commentList = [];
-
 
       circleData.imageList = imageList;
       circleData.loveList = loveList;

@@ -14,6 +14,11 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    token: '',
+    imageurl: '',
+    content: '',
+    contentList: [],
+    imageList: []
   }
 })
