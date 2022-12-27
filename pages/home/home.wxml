@@ -1,10 +1,11 @@
 <!--pages/home/home.wxml-->
 <page-meta>
   <navigation-bar  back = "{{false}}" title="朋友圈">
-<image solt="left" src="../../assets/images/相机.png" class="go-publish" bindtap="goPublish"></image>
-<image solt="right" src="../../assets/images/_我的.png" class="go-my" bindtap="gomy"></image>
+  <image solt="left" src="../../assets/images/相机.png" class="go-publish" bindtap="goPublish"></image>
+  <image solt="right" src="../../assets/images/_我的.png" class="go-my" bindtap="gomy"></image>
   </navigation-bar>
 </page-meta>
+
 <view class="item" wx:for="{{list}}" wx:index="index">
   <view class="left">
 <image class="avatar"></image>

@@ -128,7 +128,7 @@ Page({
           }
           else {
               wx.showToast({
-                title: '用户已存在，重新注册',
+                title: '注册失败',
               })
             }
           that.setData({

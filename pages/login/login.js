@@ -31,8 +31,8 @@ Page({
         success: function (res) {
           if(res.data.success == true){
             wx.navigateTo({
-              url: 'pages/home/home',
-            }),
+              url: '/pages/home/home',
+            })
             wx.showToast({
               title: '登录成功',
             })
@@ -46,6 +46,11 @@ Page({
           that.setData({
               sucess: res.data.success,
               token: res.data.token
+          });
+          console.log(res.data.token);
+          wx.setStorage({
+            key: 'token',
+            data: res.data.token
           })
       },
     });

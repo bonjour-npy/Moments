@@ -10,58 +10,56 @@ Page({
     list:[],
     showOperationPannelIndex:-1,
   },
-  goPublish:function(){
+  goPublish: function() {
     wx.navigateTo({
       url:"../details/details"
     })
   },
-  gomy:function(){
+  gomy: function() {
     wx.navigateTo({
       url:"../my/my"
     })
   },
-
-
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-that = this;
-for(var i=1;i<10;i++){
-  var circleData = {};
-  circleData.nickName = "朋友-"+i;
-  circleData.content = "朋友发布-"+i;
-  circleData.time = "2022-2-2"+i;
+    that = this;
+    for(var i=1;i<10;i++){
+      var circleData = {};
+      circleData.nickName = "朋友-"+i;
+      circleData.content = "朋友发布-"+i;
+      circleData.time = "2022-2-2"+i;
 
-  var imageList = [];
-  var loveList = [];
-  var commentList = [];
-
-
-  circleData.imageList = imageList;
-  circleData.loveList = loveList;
-  circleData.commentList = commentList;
-
-  for(var j=1; j<i;j++){
-    imageList.push(j);
-    var loveData = {};
-    loveData.nickName = '点赞-'+j;
+      var imageList = [];
+      var loveList = [];
+      var commentList = [];
 
 
-    loveList.push(loveData);
+      circleData.imageList = imageList;
+      circleData.loveList = loveList;
+      circleData.commentList = commentList;
 
-    var commentData = {};
-    commentData.nickName = '兰陵王-'+j+":";
-    commentData.content = "评论内容-"+j;
+      for(var j=1; j<i;j++){
+        imageList.push(j);
+        var loveData = {};
+        loveData.nickName = '点赞-'+j;
 
-    commentList.push(commentData);
-  }
-  that.data.list.push(circleData);
-}
-that.setData({
-  list:that.data.list
-})
-},
+
+        loveList.push(loveData);
+
+        var commentData = {};
+        commentData.nickName = '兰陵王-'+j+":";
+        commentData.content = "评论内容-"+j;
+
+        commentList.push(commentData);
+      }
+      that.data.list.push(circleData);
+    }
+    that.setData({
+      list:that.data.list
+    })
+  },
 
   /**
    * 生命周期函数--监听页面初次渲染完成

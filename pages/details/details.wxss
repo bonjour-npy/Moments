@@ -1,6 +1,7 @@
 /* pages/details/details.wxss */
 /* pages/input/input.wxss */
 .input1{
+  margin: auto;
   width: 350px;
   height: 120px;
   border: 1px solid black; border-radius: 1px;

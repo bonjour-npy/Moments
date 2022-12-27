@@ -37,7 +37,7 @@
     <view class="back">
       <button class='button-conback' bindtap='loginClick' hover-class='login-hover'>立即注册</button>
     </view>
-    <!-- 记得自己已有账号返回登录 -->
+    <!-- 已有账号返回登录 -->
     <view class="backlgoin">
       <button class='button-conback' bindtap='backloginClick' hover-class='login-hover'>返回登录</button>
     </view>
