@@ -1,0 +1,128 @@
+/* pages/home/home.wxss */
+
+.go-publish{
+  width: 30px;
+  height: 30px;
+}
+.go-my{
+  width: 30px;
+  height: 30px;
+  margin-left: 600rpx;
+  position: absolute;
+}
+
+page{
+  background: #fff;
+}
+.item{
+  width: 100%;
+  padding: 20rpx 20rpx;
+  display: flex;
+  border-bottom:1px solid #f0f0f0 ;
+}
+.left{
+  width: 80rpx;
+  margin-right: 10rpx;
+}
+.avatar{
+  width: 80rpx;
+  height: 80rpx;
+}
+.right{
+  width: 620rpx;
+  display: flex;
+  flex-direction: column;
+}
+.nickName{
+  font-size: 32rpx;
+  line-height: 50rpx;
+  columns: #3b4977;
+}
+.content{
+  font-size: 32rpx;
+  line-height: 40rpx;
+  columns: #181818;
+  margin-bottom: 10rpx;
+}
+.image-list{
+  display: flex;
+  flex-wrap: wrap;
+}
+.image-list .image{
+  width: 160rpx;
+  height: 160rpx;
+  background: #f3f3f3;
+  margin-right: 10rpx;
+  margin-bottom: 10rpx;
+}
+.time-area{
+  display: flex;
+  height: 70rpx;
+  position: relative;
+  align-items: center;
+}
+.time-area .time{
+  font-size: 26rpx;
+  line-height: 70rpx;
+  color:696969;
+}
+.time-area .operation-button{
+  height: 40rpx;
+  width: 70rpx;
+  position: absolute;
+  right: 0rpx;
+  top:15rpx;
+}
+.time-area .operation-panne{
+  position: absolute;
+  top:0rpx;
+  right: 80rpx;
+  width: 300rpx;
+  line-height: 70rpx;
+  background-color: #4c5154;
+  border-radius: 10rpx;
+  font-size: 24rpx;
+  color:white;
+  text-align: center;
+}
+.time-area .operation-panne .tab{
+display: inline-block;
+width: 150rpx;
+}
+.time-area .operation-panne .tab .image{
+width: 26rpx;
+height: 26rpx;
+vertical-align: middle;
+background-color: transparent;
+}
+.love-comment{
+  margin-top: 10rpx;
+  background-color: #f7f7f7;
+  width: 100%;
+}
+.love{
+  padding: 6rpx 16rpx;
+  border-bottom: 1px solid #f0f0f0;
+}
+.love .love-icon{
+  width: 26rpx;
+  height: 26rpx;
+}
+.love .love-nickName{
+  font-size: 30rpx;
+  line-height: 40rpx;
+  color: #3b4977;
+
+}
+.comment{
+  padding: 6rpx 16rpx;
+  padding-bottom: 12rpx;
+  font-size: 30rpx;
+}
+.comment .comment-content{
+  color:#181818;
+  line-height:  40rpx;
+}
+.comment .comment-nickName{
+  color:#3b4977;
+}

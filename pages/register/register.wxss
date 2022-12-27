@@ -1,0 +1,98 @@
+/* pages/register/register.wxss */
+page {
+  height: 100%;
+  background-color: white;
+  margin: 0px;
+  padding: 0px;
+}
+
+.newuser {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  margin-left: 40rpx;
+  margin-top: 60rpx;
+  font-weight: 700;
+}
+
+/*表单内容*/
+.register-from {
+  margin-top: 20px;
+  flex: auto;
+  height: 100%;
+}
+
+.inputView {
+  background-color: #fff;
+  line-height: 44px;
+}
+
+/*登录小图片*/
+/* .nameImage,
+.keyImage {
+  margin-left: 22px;
+  margin-top: 15px;
+  width: 14px;
+  height: 14px
+} */
+
+.keyhidden {
+  margin-left: 210px;
+  margin-top: 15px;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+}
+
+.loginLab {
+  margin: 15px 15px 15px 10px;
+  color: #545454;
+  font-size: 15px;
+  font-weight: 600;
+  margin-left: 50rpx;
+}
+
+/* 输入框 */
+.inputText {
+  height: 75rpx;
+  width: 400rpx;
+  flex: block;
+  float: right;
+  text-align: left;
+  margin-right: 65px;
+  margin-top: 8px;
+  /* background-color: white; */
+  font-size: 15px;
+  border-radius: 50rpx;
+  /* color: aliceblue; */
+  /* box-shadow: 6rpx 6rpx 6rpx 6rpx violet; */
+}
+
+/* 中间割线 */
+.line {
+  width: 90%;
+  height: 1px;
+  background-color: #000;
+  margin-top: 1px;
+  margin-left: 18px;
+}
+
+/* 登录按钮样式 */
+.button-conback {
+  height: 90rpx !important;
+  width: 50% !important;
+  margin-top: 100rpx;
+  border-radius: 20rpx;
+  /* background: linear-gradient(to right, #bbdbec, #e5b7e9); */
+  background-color: #62b900;
+  color: white;
+}
+
+.regiter-from {
+  background-color: white;
+  margin: 0rpx 20rpx;
+  border-radius: 15rpx;
+  /* -webkit-filter: drop-shadow(0 0 8rpx #ef33b1);
+  filter: drop-shadow(0 0 8rpx #ef33b1); */
+}

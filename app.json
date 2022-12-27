@@ -1,0 +1,22 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/home/home",
+    "pages/index/index",
+    "pages/rqe/rqe",
+    "pages/my/my",
+    "pages/register/register",
+    "pages/details/details",
+    "pages/publish/publish"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "我的",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#000000",
+    "enablePullDownRefresh": true
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

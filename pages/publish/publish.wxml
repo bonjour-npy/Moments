@@ -1,0 +1,37 @@
+<!--pages/publish/publish.wxml-->
+<view class="header">
+<button class="btn" type="primary" size="mini">发表</button>
+</view>
+<view class="weui-cells">
+  <view class="weui-cell ">
+    <view class="weui-cell_bd">
+      <textarea class="weui-textarea" name="input" placeholder="记录美好生活" style="height: 3.3em" bindinput="bindInput" maxlength="200" />
+      <view class="weui-textarea-conter">{{textLenth}}/200</view>
+    </view>
+  </view>
+  <view class="weui-cell ">
+    <view class="weui-cell_bd">
+      <view class="weui-uploader"></view>
+      <view class="weui-uploader__hd">
+        <view class="weui-uploader__overview">
+          <view class="weui-uploader__title">图片上传</view>
+          <view class="weui-uploader__info" wx:if="{{maxCount>1}}">{{images.length}}/{{maxCount}}</view>
+
+        </view>
+        <view class="weui-uploader__tips">最多上传9张图片</view>
+          </view>
+          <view class=" weui-uploader_bd">
+          <view class="weui-uploader__files">
+            <block wx:for="{{images}}" wx:key="*this">
+              <view class="weui-uploader__file" data-index="{{index}}" bindtap="previewImage">
+                <image class="weui-uploader__img" src="{{item}}" mode="aspectFill"></image>
+              </view>
+            </block>
+          </view>
+          <view wx:if="{{images.length<maxCount}}" class="weui-uploader__input-box">
+            <view class="weui-uploader__input" bindtap="chooseImage"></view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>

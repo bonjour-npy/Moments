@@ -1,0 +1,36 @@
+<!--pages/login/login.wxml-->
+
+<view class="container">
+  <view class="login-icon">
+    <image class="login-img" src="../../assets/images/login-avatar.jpg"></image>
+  </view>
+  <!-- <text class="title"> 图片分享</text> -->
+</view>
+<view class="login-from">
+
+  <!--邮箱-->
+  <view class="inputView">
+    <!-- <image class="nameImage" src="../assets/images/name.png"></image> -->
+    <!-- <icon type="success" color="#62b900" size="20" class="nameImage"></icon> -->
+    <label class="loginLab">邮箱</label>
+    <input class="inputText" placeholder="请输入邮箱" bindinput="mailInput" />
+  </view>
+  <view class="line"></view>
+
+  <!--密码-->
+  <view class="inputView">
+    <!-- <image class="keyImage" src="../assets/images/key.png"></image> -->
+    <label class="loginLab">密码</label>
+    <!-- <icon class="keyImage" type="waiting" color="#62b900" size="20"></icon> -->
+    <input class="inputText" password="true" placeholder="请输入密码" bindinput="passwordInput" password='{{passwordType}}'></input>
+    <image class="keyhidden" src='{{defaultType? "../../assets/images/hidden.png" : "../../assets/images/appear.png"}}' bindtap='eyeStatus'></image>
+  </view>
+  <view class="line"></view>
+
+  <!--按钮-->
+  <view class="loginBtnView">
+    <button class='button-contain' bindtap='loginClick' hover-class='login-hover'>登录</button>
+    <button class='register' bindtap='registerClick' hover-class='register-hover'>还未注册？<text class="zhuce">去注册</text></button>
+  </view>
+
+</view>

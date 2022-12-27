@@ -1,0 +1,106 @@
+/* pages/login/login.wxss */
+page {
+  height: 100%;
+  background-color: white;
+  margin: 0px;
+  padding: 0px;
+}
+
+.container {
+  height: 400rpx;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.login-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200rpx;
+  width: 300rpx;
+}
+
+
+/*表单内容固定一个集合内容在一个整体*/
+.login-from {
+  background-color: white;
+  margin: 0rpx 20rpx;
+  border-radius: 15rpx;
+
+}
+
+.inputView {
+  background-color: #fff;
+  line-height: 40px;
+}
+
+/*登录小图片*/
+.nameImage,
+.keyImage {
+  margin-top: 15px;
+  width: 14px;
+  height: 14px
+}
+
+.keyhidden {
+  margin-left: 200px;
+  margin-top: 15px;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+}
+
+.loginLab {
+  margin: 15px 15px 15px 10px;
+  color: #545454;
+  font-size: 20px
+}
+
+/* 输入框 */
+.inputText {
+  height: 75rpx;
+  width: 400rpx;
+  flex: block;
+  float: right;
+  text-align: left;
+  margin-right: 50px;
+  margin-top: 8px;
+  position: relative;
+  font-size: 20px;
+  border-radius: 50rpx;
+}
+
+/* 中间割线 */
+.line {
+  width: 90%;
+  height: 1px;
+  background-color: #cccccc;
+  margin-left: 18px;
+  margin-top: 5px;
+}
+
+/* 登录按钮样式 */
+.button-contain {
+  height: 90rpx !important;
+  width: 90% !important;
+  margin-top: 100rpx;
+  border-radius: 20rpx;
+  background-color: #62b900;
+  color: white;
+}
+
+.register {
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  border-radius: 50rpx;
+  margin-top: 20rpx;
+  background-color: white;
+}
+
+.register text {
+  color: blue;
+}

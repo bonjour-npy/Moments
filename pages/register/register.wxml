@@ -1,0 +1,45 @@
+<!--pages/register/register.wxml-->
+<view class="container1">
+  <text class="newuser">创建新用户</text>
+  <view class="register-from">
+    <!--用户名-->
+    <view class="inputView">
+      <!-- <icon type="success" color="#44ADFB" size="20" class="nameImage"></icon> -->
+      <label class="loginLab">用户名</label>
+      <input class="inputText" placeholder="请输入用户名" bindinput="usernameInput" />
+    </view>
+    <view class="line"></view>
+    <!-- 邮箱名 -->
+    <view class="inputView">
+      <!-- <icon type="success" color="#44ADFB" size="20" class="nameImage"></icon> -->
+      <label class="loginLab">邮箱</label>
+      <input class="inputText" placeholder="请输入邮箱 " bindinput="mailInput" />
+    </view>
+    <view class="line"></view>
+    <!--密码-->
+    <view class="inputView">
+      <!-- <image class="keyImage" src="../assets/images/key.png"></image> -->
+      <label class="loginLab">密码</label>
+      <!-- <icon class="keyImage" type="waiting" color="#44ADFB" size="20"></icon> -->
+      <input class="inputText" password="true" placeholder="请输入密码" bindinput="passwordInput" password='{{passwordType}}'></input>
+      <image class="keyhidden" src='{{defaultType? "../../assets/images/hidden.png" : "../../assets/images/appear.png"}}' bindtap='eyeStatus'></image>
+    </view>
+    <view class="line"></view>
+    <!--再次确认密码-->
+    <view class="inputView">
+      <!-- <icon class="keyImage" type="waiting" color="#44ADFB" size="20"></icon> -->
+      <label class="loginLab">密码</label>
+      <input class="inputText" password="true" placeholder="请确认密码" bindinput="passwordInput" password='{{passwordType2}}'></input>
+      <image class="keyhidden" src='{{defaultType2? "../../assets/images/hidden.png" : "../../assets/images/appear.png"}}' bindtap='eyeStatus2'></image>
+    </view>
+    <view class="line"></view>
+    <!-- 返回按钮 -->
+    <view class="back">
+      <button class='button-conback' bindtap='loginClick' hover-class='login-hover'>立即注册</button>
+    </view>
+    <!-- 记得自己已有账号返回登录 -->
+    <view class="backlgoin">
+      <button class='button-conback' bindtap='backloginClick' hover-class='login-hover'>返回登录</button>
+    </view>
+  </view>
+</view>

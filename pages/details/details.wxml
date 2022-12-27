@@ -1,0 +1,19 @@
+<!--pages/details/details.wxml-->
+<view class="input-view">
+      <textarea class="input1" 
+      placeholder="记录你的美，请输入图片描述" maxlength="200" bindinput="bindinput"/>
+      <view class="input2">{{inputlength}}/200</view>
+ <view>
+   图片上传
+ </view>
+ <view>
+   最多上传9张
+ </view>
+ <view>
+  <view wx:for="{{info.licensePicUrls}}">
+    <image mode="widthFix" data-src="{{item}}" src="{{item}}" wx:if="{{imgShow}}" bindtap="previewImage"></image>
+  </view>
+<image src="{{imgsrc}}" bindtap="uploadphoto" style="width: 100px;height: 100px;"/>
+</view>
+      <button class="btn1" type="primary" form-type="submit">发表</button>
+</view>

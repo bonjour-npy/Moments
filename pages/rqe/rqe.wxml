@@ -1,0 +1,29 @@
+<view>
+<image src="/assets/icon/3.png" style="width: 100%;height: 300px;" bindtap="uploadPhoto"/>
+<view class="td">点击上传图片</view>
+</view>
+<view class="input-view">
+   <form bindsubmit="onSubmit">
+      <input class="input1" 
+      placeholder="记录你的美，请输入图片描述" type="text">
+      </input>
+
+      <view>
+      日期 <picker mode="date" value="{{date}}" start="2000-09-01" end="2023-09-01" style="display: flex;flex-direction: row;flex-wrap: nowrap;"name="date"> {{date}}
+      </picker>
+    </view>
+
+<!-- <view class="partTwo">
+ 
+  <view class="item">
+    <view class="itemname">
+      <view ><image src="/assets/icon/like.png" /></view>
+      <view ><text >我的喜欢</text></view>
+    </view>
+    <view class="right"><image src="/assets/icon/1.png" /></view>
+  </view>
+</view> -->
+      
+      <button class="btn1" type="primary" form-type="submit">发表</button>
+   </form>
+</view>

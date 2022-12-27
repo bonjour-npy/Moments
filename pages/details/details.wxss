@@ -1,0 +1,40 @@
+/* pages/details/details.wxss */
+/* pages/input/input.wxss */
+.input1{
+  width: 350px;
+  height: 120px;
+  border: 1px solid black; border-radius: 1px;
+  /*设置边框及圆角*/
+}
+.input2{
+  float: right;
+}
+.input1-place{
+  /*placeholder样式类*/
+  color: palevioletred;
+  font-style: italic;
+}
+
+.btn1{
+  margin-top: 20px;
+}
+
+
+.td {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.video-item {
+  width: 100%;
+  height: 200px;
+  border: 1px solid red;
+  display: flex;
+}
+.button-item{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  margin: 10px;
+}

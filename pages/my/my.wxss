@@ -1,0 +1,140 @@
+/* pages/my/my.wxss */
+.container{
+  background-color: #eeeeee;
+  height : 100vh;
+}
+.partOne {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #a7d3e8;
+  padding-top: 130rpx;
+  padding-bottom: 130rpx;
+}
+.userinfo {
+
+  display: flex;
+  align-items: center;
+  height: 128rpx;
+  margin-left: 40rpx;
+  color: rgb(255, 255, 255);
+}
+
+.userinfo-avatar {
+  overflow: hidden;
+  width: 128rpx;
+  height: 128rpx;
+  margin: 30rpx;
+  border-radius: 50%;
+}
+.userinfo-nickname {
+  height: 128rpx;
+}
+.partOne .scanicon{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 128rpx;
+  margin-right: 80rpx;
+}
+.partOne .scanicon image{
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.partTwo{
+  height: 200rpx;
+  width: 90%;
+  margin-left: 5%;
+  margin-top: -50rpx;
+  background-color: #ffffff;
+  border: 1rpx solid rgb(176, 176, 176);
+  border-radius: 25rpx;
+}
+.partTwo .item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100rpx;
+}
+.partTwo .item .itemname{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 210rpx;
+  margin-left: 20rpx;
+}
+.partTwo .item .itemname image{
+  width: 60rpx;
+  height: 60rpx;
+}
+.partTwo .right{
+  margin-right: 20rpx;
+}
+.partTwo .right image{
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.partTwo .scan{
+  display: flex;
+  align-items: center;
+  height: 100rpx;
+}
+.partTwo .scan .itemname{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 210rpx;
+  margin-left: 20rpx;
+}
+.partTwo .scan image{
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.partThree{
+  height: 300rpx;
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 10rpx;
+  background-color: #ffffff;
+  border: 1rpx solid rgb(176, 176, 176);
+  border-radius: 25rpx;
+}
+
+.partThree .item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100rpx;
+}
+.partThree .item .itemname{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 210rpx;
+  margin-left: 20rpx;
+}
+.partThree .item .itemname image{
+  width: 60rpx;
+  height: 60rpx;
+}
+.partThree .right{
+  margin-right: 20rpx;
+}
+.partThree .right image{
+  width: 50rpx;
+  height: 50rpx;
+}
+
+/* 登录按钮样式 */
+.button-tuichu {
+  height: 90rpx !important;
+  width: 90% !important;
+  /* margin-top: 900rpx; */
+  border-radius: 20rpx;
+  background-color: #62b900;
+  color: white;
+  /* position: absolute; */
+}
