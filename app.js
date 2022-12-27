@@ -19,6 +19,7 @@ App({
     imageurl: '',
     content: '',
     contentList: [],
-    imageList: []
+    imageList: [],
+    num: 0
   }
 })

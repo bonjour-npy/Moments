@@ -11,12 +11,13 @@
 <image class="avatar"></image>
   </view>
   <view class="right">
-<view class="nickname">{{item.nickName}}</view>
-<view class ="content">
+<!-- <view class="nickname">{{item.nickName}}</view> -->
+<view class="nickname">{{item.contentList[index]}}</view>
+<!-- <view class ="content">
 {{item.content}} 
-</view>
+</view> -->
 <view class="image-list">
-<image class="image" wx:for="{{item.imageList}}"></image>
+  <image class="image" src="{{item.imageList[index]}}"></image>
 </view>
 <view class = "time-area">
   <view class = "time">{{item.time}}

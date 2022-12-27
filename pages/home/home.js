@@ -35,60 +35,60 @@ Page({
       success: function (res) {
         console.log(res.data)
         console.log('length: '+res.data.length)
-        const app = getApp();
-        app.globalData.dataList = res.data;
+        var num = 0;
         var imageList = [];
         var contentList = [];
-        for(var i=0; i<20;  i++) {
-          imageList.push(res.data[i]["image"]);
+        for(var i=0; i<20; i++) {
+          if(res.data[i]["image"] === null) {
+            continue;
+          }
+          imageList.push("https://photoshare.akasaki.space" + res.data[i]["image"]);
+          num += 1;
           contentList.push(res.data[i]["description"]);
           // console.log(res.data[i]["description"])
         }
-        that.setData({
-          ImageList: imageList,
-          ContentList: contentList
-        })
+
+        // that.setData({
+        //   ImageList: imageList,
+        //   ContentList: contentList
+        // })
+        const app = getApp();
+        app.globalData.num = num;
         app.globalData.imageList = imageList;
         app.globalData.contentList = contentList;
-        console.log(contentList)
+        // console.log(contentList)
       },
       fail: function(error) {
         console.log(error)
       }
     })
+    // console.log(contentList)
     that = this;
-    for(var i=1; i<10; i++){
+    for(var i=0; i<app.globalData.num; i++) {
       var circleData = {};
-      circleData.nickName = "朋友-"+i;
+      // circleData.nickName = "朋友-"+i;
       circleData.content = "朋友发布-"+i;
       circleData.time = "2022-2-2"+i;
-
-      var imageList = []
+      var imageList = app.globalData.imageList;
+      var contentList = app.globalData.contentList;
       var loveList = [];
       var commentList = [];
-
       circleData.imageList = imageList;
+      circleData.contentList = contentList;
       circleData.loveList = loveList;
       circleData.commentList = commentList;
-
-      for(var j=1; j<i;j++){
+      for(var j=1; j<i; j++){
         imageList.push(j);
         var loveData = {};
-        loveData.nickName = '点赞-'+j;
-
-
-        loveList.push(loveData);
-
+        loveData.nickName = '点赞';
+        // loveList.push(loveData);
         var commentData = {};
-        commentData.nickName = '兰陵王-'+j+":";
-        commentData.content = "评论内容-"+j;
-
-        commentList.push(commentData);
+        // commentList.push(commentData);
       }
       that.data.list.push(circleData);
     }
     that.setData({
-      list:that.data.list
+      list: that.data.list
     })
   },
 
