@@ -26,7 +26,7 @@ Page({
   onLoad(options) {
     const app = getApp(); // 使用全局变量
     wx.request({
-      url: 'https://photoshare.akasaki.space/api/publicians/random',
+      url: 'https://photoshare.akasaki.space/api/publicians/recent',
       method: 'GET',
       header: {
         'content-type': 'application/json',
