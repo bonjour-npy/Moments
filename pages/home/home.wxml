@@ -11,6 +11,7 @@
 <image class="avatar"></image>
   </view>
   <view class="right">
+  <view class="userid">用户id: {{item.idList[index]}}</view>
 <!-- <view class="nickname">{{item.nickName}}</view> -->
 <view class="nickname">{{item.contentList[index]}}</view>
 <!-- <view class ="content">
@@ -20,7 +21,7 @@
   <image class="image" src="{{item.imageList[index]}}"></image>
 </view>
 <view class = "time-area">
-  <view class = "time">{{item.time}}
+  <view class = "time">{{item.timeList[index]}}
   </view>
   <view>
     <image class="operation-button" src="../../assets/images/省略号.png" catchtap = "showOperationPannel" data-index= "{{index}}"></image>

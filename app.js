@@ -18,6 +18,8 @@ App({
     token: '',
     imageurl: '',
     content: '',
+    idList: [],
+    timeList: [],
     contentList: [],
     imageList: [],
     num: 0
